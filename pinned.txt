@@ -1,0 +1,17 @@
+EVENT GROUPINGS
+
+Should they be treated as categories, post objects, or a hacky combination of the two?
+
+BUY LINKS
+
+Are buy-as-member links just cut-and-paste the way "Buy" links are?
+
+ARCHIVAL + PUBLICITY CONTENT
+
+Needs to be designed
+- What are the fields?
+- How it look?
+
+EVENT/CAT PREVIEW TEXT
+
+Character limit?
