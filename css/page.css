@@ -1,0 +1,21 @@
+/*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
+html {
+  float: left;
+  width: 100%;
+}
+html body {
+  float: left;
+  width: inherit;
+}
+html body .page {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 3em;
+  background: #fafafa;
+}
+* ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

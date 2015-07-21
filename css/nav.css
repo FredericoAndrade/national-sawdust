@@ -1,3 +1,45 @@
-header#header a:visited {
-  color: #f00;
+/*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
+#header {
+  position: relative;
+  z-index: 10;
+  width: inherit;
+  height: 60px;
+  display: inline-block;
+  float: left;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+#header #logo,
+#header #nav {
+  display: inline-block;
+}
+#header #logo {
+  float: left;
+}
+#header #logo a img {
+  height: 60px;
+}
+#header #nav {
+  float: right;
+}
+#header #nav li {
+  display: inherit;
+  float: left;
+}
+#header #nav li a {
+  display: inherit;
+  padding: 0.6em 0.3em;
+  margin: 0.6em 0.9em;
+  -webkit-box-shadow: inset 0 0 0 #fff, inset 0px 0 0px #000;
+  box-shadow: inset 0 0 0 #fff, inset 0px 0 0px #000;
+  -webkit-transition: box-shadow 0.05s ease-in-out;
+  -moz-transition: box-shadow 0.05s ease-in-out;
+  -o-transition: box-shadow 0.05s ease-in-out;
+  -ms-transition: box-shadow 0.05s ease-in-out;
+  transition: box-shadow 0.05s ease-in-out;
+}
+#header #nav li a:hover {
+  -webkit-box-shadow: inset 0 -9px 0 #fff, inset 0px -11px 0px #000;
+  box-shadow: inset 0 -9px 0 #fff, inset 0px -11px 0px #000;
 }

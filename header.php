@@ -20,7 +20,7 @@
         <![endif]-->
         <header id="header">
             <div id="logo">
-                <a href="<?php bloginfo('url'); ?>"><h1>National Sawdust</h1></a>
+                <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('url'); ?>/wp-content/themes/national-sawdust/img/logo.svg" alt=""></a>
             </div>
             <ul id="nav">
                 <?php wp_list_pages('exclude=2&title_li='); ?>
