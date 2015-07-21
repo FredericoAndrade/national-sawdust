@@ -8,5 +8,8 @@ Version : 0
 License: Standard IP
 */
 
+/*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
+
 @import url("css/normalize.css");
 @import url("css/main.css");
+@import url('css/custom.css');

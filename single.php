@@ -39,7 +39,7 @@
 	    		foreach( $categories as $category ) :
 	    			$cat_id = $category->term_id;
 		    		// BEHAVIOR: Pull in three related posts. If this post has less than three categories, bring in more than one event from available categories
-	    			$related_args = array( 'category' => $id, 'posts_per_page' => -1 );
+	    			$related_args = array( 'category' => $cat_id, 'posts_per_page' => -1 );
 	    			$related_posts = get_posts( $related_args );
 
 	    			foreach( $related_posts as $post ) : ?>

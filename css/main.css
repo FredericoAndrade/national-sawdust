@@ -95,9 +95,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-@import url('nav.css');
-
-
+a {
+    text-decoration: none;
+    color: #222;
+}
 
 
 

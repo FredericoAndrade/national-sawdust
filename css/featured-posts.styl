@@ -1,0 +1,143 @@
+/*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
+@import 'nib'
+
+.featured-posts.page
+  float left
+  width 100%
+  display inline-block
+
+  .primary, .secondary
+    display inherit
+    float left
+    height 900px
+    position relative
+    z-index 3
+
+  .primary, .secondary ul li
+    box-shadow 0 2px 4px rgba(0,0,0,.2)
+
+  .primary
+    width 66.6%
+    display inherit
+
+    a
+      &.hero
+        height 83.33%
+
+    .meta
+      height 16.66%
+
+  .secondary
+    width 33.3%
+    position relative
+    z-index 2
+
+    ul
+      height 100%
+      display inherit
+
+      .feature
+        height 50%
+
+        &:nth-of-type(1)
+          position relative
+          z-index 2
+
+        &:nth-of-type(2)
+          position relative
+          z-index 1
+
+        a
+          &.hero
+            height 66.66%
+
+        .meta
+          height 33.33%
+
+  .feature
+    overflow hidden
+    background #fff
+    display inherit
+
+    &:hover
+      a.hero
+        opacity 1
+
+    $padding = 1.1em
+
+    a
+      float left
+      display inherit
+
+      &.hero
+        display inherit
+        width 100%
+        overflow hidden
+        opacity .8
+        background #CAEAF9
+        transition opacity 0.1s ease-in-out
+
+        img
+          width 100%
+          height auto
+          margin 0
+
+      &.buy-link
+        float right
+        position absolute
+        bottom .9em
+        right $padding
+        padding $padding
+        border-radius 5px
+        transition background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out
+        border-bottom 1px solid transparent
+
+        &:hover
+          color white
+          background #2D98F6
+          border-bottom-color darken(#2D98F6, 20%)
+          box-shadow 0 1px 2px rgba(0,0,0,0.1)
+
+        &:active
+          background darken(#2D98F6, 10%)
+          border-bottom 0
+
+    .meta
+      box-sizing border-box
+      padding $padding $padding $padding 2*$padding
+      width 100%
+      float left
+
+      p
+        margin 0
+        display block
+
+        &.thumb-title
+          font-weight bold
+          float left
+
+        $font-size = 1em
+        $line-height = 1.4em
+        $lines-to-show = 2
+
+        &.thumb-preview
+          display block
+          display -webkit-box
+          position absolute
+          bottom 2em
+          width 80%
+          float left
+          height $font-size*$line-height*$lines-to-show
+          margin 0 auto
+          font-size $font-size
+          line-height $line-height
+          -webkit-line-clamp $lines-to-show
+          -webkit-box-orient vertical
+          text-overflow ellipsis
+          // white-space nowrap
+          overflow hidden
+
+        &.thumb-date
+          float right
+          color #888
+          margin-right $padding
