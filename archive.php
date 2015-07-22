@@ -8,6 +8,7 @@
 	date_default_timezone_set('America/New_York');
 	
 	$current_date = date('Ymd');
+	$yesterday = date('Ymd', time() - 60 * 60 * 24);
 	$current_month = date( 'm' );
 	$month_end = date('Ymt');
 	$month_start = date('Ym'.'01');
@@ -26,7 +27,7 @@
 			array(
 				'key' => 'event_date',
 				'compare' => 'BETWEEN',
-				'value' => array( date( $month_start ), date( $current_date ) ),
+				'value' => array( date( $month_start ), date( $yesterday ) ),
 				'type' => 'DATE'
 			),
 		),
