@@ -33,10 +33,14 @@
   box-sizing: border-box;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  letter-spacing: -0.03em;
   font-family: 'black';
-  word-spacing: 0.03em;
-  font-size: 3.5em;
-  line-height: 1em;
+  font-size: 4.8em;
+  line-height: initial;
+  opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opacity=90);
+  margin-bottom: 0em;
 }
 .events-feed ul {
   display: inline-block;
@@ -78,9 +82,9 @@
 }
 .events-feed ul li a.event-link h1 {
   margin: 0;
+  letter-spacing: -0.03em;
   font-family: 'black';
-  word-spacing: 0.03em;
-  font-size: 3.5em;
+  font-size: 4.8em;
   line-height: 1em;
 }
 .events-feed ul li a.event-link p {
@@ -88,28 +92,26 @@
   position: absolute;
   bottom: 1em;
   margin: 0 0 12px 0;
+  letter-spacing: -0.03em;
   font-family: 'bold';
-  word-spacing: 0.03em;
   font-size: 1.3em;
   line-height: 1em;
 }
 .events-feed ul li a.buy-link {
   float: right;
   padding: 1.1em;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
   -webkit-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
   -moz-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
   -o-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
   -ms-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
   transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
-  border: 1px solid #f7f7f7;
+  border: 1px solid rgba(0,0,0,0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  letter-spacing: -0.03em;
   font-family: 'bold';
-  word-spacing: 0.03em;
   font-size: 1em;
-  line-height: 1em;
+  line-height: initial;
   display: block;
   position: absolute;
   bottom: 1em;
@@ -118,12 +120,11 @@
 .events-feed ul li a.buy-link:hover {
   color: #fff;
   background: #2d98f6;
-  border-bottom-color: #0a7bdf;
+  background: rgba(0,0,0,0.7);
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 .events-feed ul li a.buy-link:active {
-  background: #118af5;
   border-bottom: 0;
 }
 .events-feed ul li:nth-of-type(1) {

@@ -28,7 +28,7 @@ footer {
   box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
 }
 footer #logo {
-  float: left;
+  float: right;
 }
 footer #logo a img {
   height: 60px;

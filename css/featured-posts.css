@@ -34,24 +34,19 @@
   max-height: 900px;
   position: relative;
   z-index: 3;
+  width: 50%;
 }
 .featured-posts.page .primary,
 .featured-posts.page .secondary ul li {
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
-.featured-posts.page .primary {
-  width: 66.6%;
-  display: inherit;
-}
-.featured-posts.page .primary a.hero {
-  height: 83.33%;
-}
-.featured-posts.page .primary .meta {
-  height: 16.66%;
+.featured-posts.page .primary .event-link {
+  opacity: 1 !important;
+  -ms-filter: none;
+  filter: none;
 }
 .featured-posts.page .secondary {
-  width: 33.3%;
   position: relative;
   z-index: 2;
 }
@@ -60,6 +55,7 @@
   display: inherit;
 }
 .featured-posts.page .secondary ul .feature {
+  width: 100%;
   height: 50%;
 }
 .featured-posts.page .secondary ul .feature:nth-of-type(1) {
@@ -70,75 +66,115 @@
   position: relative;
   z-index: 1;
 }
-.featured-posts.page .secondary ul .feature a.hero {
-  height: 66.66%;
+.featured-posts.page .secondary ul .feature .event-link {
+  position: relative;
 }
-.featured-posts.page .secondary ul .feature .meta {
-  height: 33.33%;
+.featured-posts.page .secondary ul .feature .event-link .thumb-date {
+  margin: 0;
+  position: absolute;
+  bottom: 1em;
 }
 .featured-posts.page .feature {
   overflow: hidden;
-  background: #fff;
+  background-color: #fff;
+  display: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
   display: inherit;
 }
-.featured-posts.page .feature:hover a.hero {
+.featured-posts.page .feature.has-image .event-link {
+  background-position: right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.featured-posts.page .feature.has-image .event-link h1,
+.featured-posts.page .feature.has-image .event-link p {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.featured-posts.page .feature.has-image .buy-link {
+  background: rgba(255,255,255,0.9);
+}
+.featured-posts.page .feature.has-image .buy-link:hover {
+  background: #fff;
+  color: #000;
+}
+.featured-posts.page .feature:hover .event-link {
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-.featured-posts.page .feature a {
-  float: left;
-  display: inherit;
-}
-.featured-posts.page .feature a.hero {
-  display: inherit;
+.featured-posts.page .feature .event-link {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1.3em;
+  display: block;
+  height: 100%;
   width: 100%;
-  overflow: hidden;
   opacity: 0.8;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: alpha(opacity=80);
-  background: #caeaf9;
   -webkit-transition: opacity 0.1s ease-in-out;
   -moz-transition: opacity 0.1s ease-in-out;
   -o-transition: opacity 0.1s ease-in-out;
   -ms-transition: opacity 0.1s ease-in-out;
   transition: opacity 0.1s ease-in-out;
 }
-.featured-posts.page .feature a.hero img {
-  width: 100%;
-  height: auto;
-  margin: 0;
+.featured-posts.page .feature .event-link:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
-.featured-posts.page .feature a.buy-link {
+.featured-posts.page .feature .event-link h1 {
+  margin: 0;
+  padding-right: 25%;
+  letter-spacing: -0.03em;
+  font-family: 'black';
+  font-size: 4.8em;
+  line-height: 1em;
+}
+.featured-posts.page .feature .event-link p {
+  padding-right: 25%;
+  letter-spacing: -0.03em;
+  font-family: 'bold';
+  font-size: 2em;
+  line-height: 1em;
+}
+.featured-posts.page .feature .event-link p.thumb-preview {
+  position: absolute;
+  bottom: 0;
+}
+.featured-posts.page .feature .buy-link {
   float: right;
   padding: 1.1em;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
   -webkit-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
   -moz-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
   -o-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
   -ms-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
   transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
-  border: 1px solid #f7f7f7;
+  border: 1px solid rgba(0,0,0,0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  letter-spacing: -0.03em;
   font-family: 'bold';
-  word-spacing: 0.03em;
   font-size: 1em;
-  line-height: 1em;
+  line-height: initial;
   position: absolute;
   bottom: 0.9em;
   right: 1.1em;
 }
-.featured-posts.page .feature a.buy-link:hover {
+.featured-posts.page .feature .buy-link:hover {
   color: #fff;
   background: #2d98f6;
-  border-bottom-color: #0a7bdf;
+  background: rgba(0,0,0,0.7);
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
-.featured-posts.page .feature a.buy-link:active {
-  background: #118af5;
+.featured-posts.page .feature .buy-link:active {
   border-bottom: 0;
 }
 .featured-posts.page .feature .meta {

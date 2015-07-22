@@ -14,23 +14,16 @@
     max-height 900px
     position relative
     z-index 3
+    width 50%
 
   .primary, .secondary ul li
     box-shadow $shadow-2
 
   .primary
-    width 66.6%
-    display inherit
-
-    a
-      &.hero
-        height 83.33%
-
-    .meta
-      height 16.66%
+    .event-link
+      opacity 1 !important
 
   .secondary
-    width 33.3%
     position relative
     z-index 2
 
@@ -39,6 +32,7 @@
       display inherit
 
       .feature
+        width 100%
         height 50%
 
         &:nth-of-type(1)
@@ -49,44 +43,72 @@
           position relative
           z-index 1
 
-        a
-          &.hero
-            height 66.66%
+        .event-link
+          position relative
 
-        .meta
-          height 33.33%
+          .thumb-date
+            margin 0
+            position absolute
+            bottom 1em
 
   .feature
     overflow hidden
-    background #fff
+    background-color #fff
+    display inherit
+    box-sizing border-box
+    float left
     display inherit
 
+    &.has-image
+      .event-link
+        background-position right
+        background-size cover
+
+        h1, p
+          color white
+          text-shadow $shadow-2
+
+      .buy-link
+        background rgba(255,255,255,.9)
+
+        &:hover
+          background white
+          color black
+
     &:hover
-      a.hero
+      .event-link
         opacity 1
 
-    a
-      float left
-      display inherit
+    .event-link
+      box-sizing border-box
+      padding 1.3em
+      display block
+      height 100%
+      width 100%
+      opacity .8
+      transition opacity $time ease-in-out
 
-      &.hero
-        display inherit
-        width 100%
-        overflow hidden
-        opacity .8
-        background #CAEAF9
-        transition opacity $time ease-in-out
+      &:hover
+        opacity 1
 
-        img
-          width 100%
-          height auto
-          margin 0
+      h1
+        margin 0
+        padding-right 25%
+        font('black',4.8em,1em)
 
-      &.buy-link
-        buy-link()
-        position absolute
-        bottom .9em
-        right $padding
+      p
+        padding-right 25%
+        font('bold', 2em, 1em)
+
+        &.thumb-preview
+          position absolute
+          bottom 0
+
+    .buy-link
+      buy-link()
+      position absolute
+      bottom .9em
+      right $padding
 
     .meta
       box-sizing border-box
