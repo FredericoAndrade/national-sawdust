@@ -1,6 +1,6 @@
-<?php 
+<?php
 	get_header();
-		
+
 	$queried_object = get_queried_object();
 	$taxonomy = $queried_object->taxonomy;
 	$term_id = $queried_object->term_id;
@@ -25,7 +25,7 @@
 					<?php the_title(); ?>
 					<?php the_post_thumbnail( 'large', array( 'class' => 'event-thumb' ) ); ?>
 					<?php the_date('m/d/Y'); ?>
-					<?php echo_purchase_link( get_the_ID() ); ?>			
+					<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
 				</li>
 			<?php endwhile; ?>
 			</ul>

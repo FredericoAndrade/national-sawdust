@@ -82,10 +82,15 @@
 }
 .events-feed ul li a.event-link h1 {
   margin: 0;
+  text-transform: capitalize;
   letter-spacing: -0.03em;
   font-family: 'black';
-  font-size: 4.8em;
+  font-size: 6vw;
   line-height: 1em;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 100%;
 }
 .events-feed ul li a.event-link p {
   font-weight: bold;
@@ -94,7 +99,7 @@
   margin: 0 0 12px 0;
   letter-spacing: -0.03em;
   font-family: 'bold';
-  font-size: 1.3em;
+  font-size: 1.8vw;
   line-height: 1em;
 }
 .events-feed ul li a.buy-link {

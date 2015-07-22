@@ -1,7 +1,7 @@
 /*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
 @import 'variables'
 
-.featured-posts.page
+.featured-posts
   float left
   width 100%
   display inline-block
@@ -59,6 +59,32 @@
     float left
     display inherit
 
+    .event-link
+      box-sizing border-box
+      padding 1.3em
+      display block
+      height 100%
+      width 100%
+      opacity .8
+      transition opacity $time
+
+      &:hover
+        opacity 1
+
+      h1
+        margin 0
+        padding-right 25%
+        font-size
+        font('black',5vw,1em)
+
+      p
+        padding-right 25%
+        font('bold', 2vw, 1.4)
+
+        &.thumb-preview
+          position absolute
+          bottom 0
+
     &.has-image
       .event-link
         background-position right
@@ -79,74 +105,8 @@
       .event-link
         opacity 1
 
-    .event-link
-      box-sizing border-box
-      padding 1.3em
-      display block
-      height 100%
-      width 100%
-      opacity .8
-      transition opacity $time ease-in-out
-
-      &:hover
-        opacity 1
-
-      h1
-        margin 0
-        padding-right 25%
-        font('black',4.8em,1em)
-
-      p
-        padding-right 25%
-        font('bold', 2em, 1em)
-
-        &.thumb-preview
-          position absolute
-          bottom 0
-
     .buy-link
       buy-link()
       position absolute
       bottom .9em
       right $padding
-
-    .meta
-      box-sizing border-box
-      padding $padding $padding $padding 2*$padding
-      width 100%
-      float left
-
-      p
-        margin 0
-        display block
-
-        &.thumb-title
-          font-weight bold
-          float left
-          width 70%
-
-        $font-size = 1em
-        $line-height = 1.4em
-        $lines-to-show = 2
-
-        &.thumb-preview
-          display block
-          display -webkit-box
-          position absolute
-          bottom 2em
-          width 80%
-          float left
-          height $font-size*$line-height*$lines-to-show
-          margin 0 auto
-          font-size $font-size
-          line-height $line-height
-          -webkit-line-clamp $lines-to-show
-          -webkit-box-orient vertical
-          text-overflow ellipsis
-          overflow hidden
-
-        &.thumb-date
-          width 30%
-          float right
-          color #888
-          text-align right
