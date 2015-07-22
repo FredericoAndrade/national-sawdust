@@ -1,5 +1,5 @@
 /*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
-@import 'nib'
+@import 'variables'
 
 #header
   position relative
@@ -16,6 +16,7 @@
 
   #logo
     float left
+
     a
       img
         height 60px
@@ -26,13 +27,14 @@
     li
       display inherit
       float left
+      font-family 'medium'
 
       a
         display inherit
         padding .6em .3em
         margin .6em .9em
         box-shadow inset 0 0 0 #fff, inset 0px 0 0px #000
-        transition box-shadow 0.05s ease-in-out
+        transition box-shadow $time ease-in-out
 
         &:hover
           box-shadow inset 0 -9px 0 #fff, inset 0px -11px 0px #000

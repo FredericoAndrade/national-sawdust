@@ -1,6 +1,7 @@
 /*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
 @import url("page.css");
 @import url("nav.css");
+@import url("footer.css");
 @import url("index.css");
 @import url("featured-posts.css");
 @import url("events-feed.css");

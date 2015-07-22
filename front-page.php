@@ -63,16 +63,15 @@
     <div class="events-feed page">
 		<h1>Coming up</h1>
 		<ul>
-		    	<?php foreach( $events_feed_posts as $post ) : setup_postdata( $post ); ?>
+		    	<?php foreach( $events_feed_posts as $post ) : setup_postdata( $post );
+		    		$event_date = new DateTime( get_field( 'event_date', get_the_ID() ) );
+		    	?>
 				<li>
-				<!-- markup to be considered here -->
-					<a href="<?php the_permalink(); ?>">
-						<?php the_title(); ?>
-
-						<?php the_date( 'd/m/Y' ); ?>
+					<a class="event-link" href="<?php the_permalink(); ?>">
+						<h1><?php the_title(); ?></h1>
+						<p class="thumb-date"><?php echo $event_date->format('d/m/y') ?></p>
 					</a>
-					<a href=""<?php echo get_field( 'purchase_link' ); ?>"">Buy</a>
-					<?php echo get_field( 'purchase_link' ); ?>
+					<a class="buy-link" href="<?php echo get_field( 'purchase_link' ); ?>">Buy</a>
 				</li>
 		    	<?php endforeach; wp_reset_postdata(); ?>
 	    </ul>
