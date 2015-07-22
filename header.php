@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
         <script src="<?php bloginfo('url'); ?>/wp-content/themes/national-sawdust/js/vendor/modernizr-2.8.3.min.js"></script>
+        <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
         <!--[if lt IE 8]>
