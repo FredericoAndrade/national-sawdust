@@ -22,8 +22,12 @@
             <div id="logo">
                 <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('url'); ?>/wp-content/themes/national-sawdust/img/logo.svg" alt=""></a>
             </div>
+            <div id="search-bar">
+                <?php get_search_form(); ?>
+            </div>
             <ul id="nav">
-                <?php wp_list_pages('exclude=2&title_li='); ?>
+                <li><a href="<?php bloginfo( 'url' ); ?>/mission">about</a></li>
+                <?php wp_list_pages('exclude=2,68,70,72,74&title_li='); ?>
             </ul>
         </header>
 

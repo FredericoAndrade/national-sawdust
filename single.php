@@ -17,6 +17,7 @@
 						<span class="date"><?php the_date('d F, Y'); ?></span>
 					</h1>
 					<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
+					<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
 					<article>
 						<?php the_content(); ?>
 					</article>
@@ -24,6 +25,7 @@
 					<ul class="categories">
 						<?php wp_list_categories( 'exclude=2&title_li=' ); ?>
 					</ul>
+					<p class="date"><?php the_date('m/d/Y'); ?></p>
 				</div>
 			</div>
 			<div class="archive">
@@ -44,17 +46,17 @@
 		    			$related_args = array( 'category' => $cat_id, 'posts_per_page' =>  -1);
 		    			$related_posts = get_posts( $related_args );
 		    			foreach( $related_posts as $post ) : ?>
-
-					<li class="related-post">
+					<li class="<?php echo $post->post_name; ?> related-post">
 						<a class="event-link" href="<?php the_permalink(); ?>">
-							<!-- pass conditional bg image -->
-							<!--<?php the_post_thumbnail( 'medium', array( 'class' => 'event-thumb' ) ); ?>-->
+							<?php the_post_thumbnail( 'medium', array( 'class' => 'event-thumb' ) ); ?>
 							<h1><?php the_title(); ?></h1>
 							<p class="thumb-date">
 								<?php $date = new DateTime( get_field('event_date') ); echo $date->format('d F, Y'); ?>
+								<?php echo_time( get_the_ID() ); ?>
 							</p>
 						</a>
 						<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
+						<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
 					</li>
 
 		    	<?php endforeach; endforeach; ?>
