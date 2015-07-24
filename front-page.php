@@ -1,6 +1,6 @@
 <?php
 	get_header();
-
+	//date_default_timezone_set('America/New_York');
 	$feature_one = get_field( 'first_feature_post' );
 	$feature_one_id = $feature_one->ID;
 	$feature_one_permalink = get_permalink( $feature_one_id );
@@ -29,7 +29,18 @@
 	$feature_three_date = new DateTime( get_field( 'event_date', $feature_three_id ) );
 
 	$events_feed = get_category_by_slug( 'homepage-feed' )->term_id;
-	$events_args = array( 'category' => $events_feed, 'posts_per_page' => '-1' );
+	$yesterday = date('Ymd', time() - 60 * 60 * 24);
+	$events_args = array( 
+		'category' => $events_feed, 
+		'meta_query' => array(
+				array(
+					'key' => 'event_date',
+					'compare' => '>',
+					'value' => date( $yesterday ),
+					'date' => 'DATE'
+				),
+			),
+		'posts_per_page' => '-1' );
 	$events_feed_posts = get_posts( $events_args );
 	?>
 	<div class="featured-posts">
