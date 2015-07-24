@@ -20,17 +20,22 @@
   font-weight: normal;
   font-style: normal;
 }
-.sub-header {
+.info {
+  margin: auto;
+  display: table !important;
+}
+.info .sub-header {
   height: 60px;
   display: inline-block;
   float: right;
   margin-top: 5em;
+  margin-right: -3em;
 }
-.sub-header nav {
+.info .sub-header nav {
   float: right;
   display: inline-block;
 }
-.sub-header nav li {
+.info .sub-header nav li {
   float: left;
   display: inherit;
 /* Note on letter-spacing: Photoshop tracking is based on 1/1000em */
@@ -39,10 +44,10 @@
   font-size: 1em;
   line-height: 1.7em;
 }
-.sub-header nav li.current_page_item {
+.info .sub-header nav li.current_page_item {
   display: none;
 }
-.sub-header nav li a {
+.info .sub-header nav li a {
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
@@ -57,7 +62,10 @@
   -ms-transition: box-shadow 0.1s ease-in-out;
   transition: box-shadow 0.1s ease-in-out;
 }
-.sub-header nav li a:hover {
+.info .sub-header nav li a:hover {
   -webkit-box-shadow: inset 0 -9px 0 #fff, inset 0px -11px 0px #000;
   box-shadow: inset 0 -9px 0 #fff, inset 0px -11px 0px #000;
+}
+.info article {
+  max-width: 1024px;
 }

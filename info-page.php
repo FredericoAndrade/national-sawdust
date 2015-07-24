@@ -11,7 +11,7 @@ get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-  <div class="page">
+  <div class="info page">
     <div class="sub-header">
       <nav>
         <?php wp_list_pages('exclude=2,47,49&title_li='); ?>

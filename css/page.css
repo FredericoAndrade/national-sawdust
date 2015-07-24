@@ -61,7 +61,7 @@ h1.section-title {
   margin-bottom: 0.5em;
 }
 article {
-  display: inline-block;
+  display: block;
   margin-bottom: 4em;
 }
 article p {
