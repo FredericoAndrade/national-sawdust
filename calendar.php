@@ -43,9 +43,11 @@
 
 	<?php if ( $upcoming_calendar_posts->have_posts() ) : ?>
 		<ul class="posts">
-			<?php  while ( $upcoming_calendar_posts->have_posts() ) : $upcoming_calendar_posts->the_post(); ?>
-			<?php $event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
-			<li style="background:url('<?php echo $event_thumbnail[0]; ?>');" class="related-post <?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image<?php endif; ?>">
+			<?php  
+				while ( $upcoming_calendar_posts->have_posts() ) : $upcoming_calendar_posts->the_post(); 
+				$event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); 
+				$post_categories = get_the_category( get_the_ID() ); ?>
+			<li style="background:url('<?php echo $event_thumbnail[0]; ?>');" class="related-post <?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image <?php endif; foreach ($post_categories as $category) : $category_name = $category->slug; echo $category_name . ' '; endforeach; ?>">
 				<a class="event-link" href="<?php the_permalink(); ?>">
 					<h1><?php the_title(); ?></h1>
 					<p class="thumb-date">
@@ -68,9 +70,11 @@
 
 		<h3 class="title">Past Events</h3>
 		<ul class="posts">
-			<?php while ( $past_calendar_posts->have_posts() ) : $past_calendar_posts->the_post(); ?>
-			<?php $event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
-			<li style="background:url('<?php echo $event_thumbnail[0]; ?>');" class="related-post <?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image<?php endif; ?>">
+			<?php 
+				while ( $past_calendar_posts->have_posts() ) : $past_calendar_posts->the_post();
+				$event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); 
+				$post_categories = get_the_category( get_the_ID() ); ?>
+			<li style="background:url('<?php echo $event_thumbnail[0]; ?>');" class="related-post <?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image <?php endif; foreach ($post_categories as $category) : $category_name = $category->slug; echo $category_name . ' '; endforeach; ?>">
 				<a class="event-link" href="<?php the_permalink(); ?>">
 					<h1><?php the_title(); ?></h1>
 					<p class="thumb-date">
