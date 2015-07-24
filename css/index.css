@@ -184,3 +184,11 @@ font-size
 .featured-posts .feature .buy-links .buy-link:active {
   border-bottom: 0;
 }
+.events-feed {
+  width: 100%;
+  display: inline-block;
+}
+.events-feed ul {
+  display: inline-block;
+  margin: 0 -1%;
+}

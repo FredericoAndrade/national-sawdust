@@ -57,5 +57,5 @@ h1.section-title {
   opacity: 0.9;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   filter: alpha(opacity=90);
-  margin-bottom: 0em;
+  margin-bottom: 0.5em;
 }
