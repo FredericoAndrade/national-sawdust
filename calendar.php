@@ -37,7 +37,7 @@
 
 <div class="calendar page">
 
-	<h1 class="section-title">Showing Posts for <?php echo date( 'F' ); ?></h1>
+	<h1 class="section-title"><?php echo date( 'F, Y' ); ?></h1>
 
 	<h3 class="title">Upcoming Events</h3>
 
