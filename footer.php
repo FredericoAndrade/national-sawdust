@@ -1,4 +1,5 @@
         <footer>
+            <p>© Copyright - National Sawdust at Original Music Workshop.</p>
             <div id="logo">
                 <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('url'); ?>/wp-content/themes/national-sawdust/img/logo.svg" alt=""></a>
             </div>
