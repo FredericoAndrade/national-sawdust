@@ -8,8 +8,9 @@
 
   <div class="page">
 	<h1 class="section-title"><?php the_title(); ?></h1>
-
-	<?php the_content(''); ?>
+      <article>
+      	<?php the_content(''); ?>
+      </article>
   </div>
 
 <?php endwhile; endif; ?>

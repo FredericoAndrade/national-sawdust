@@ -96,7 +96,7 @@
 		    		$event_date = new DateTime( get_field( 'event_date', get_the_ID() ) );
 		    		$event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 					$post_categories = get_the_category( get_the_ID() ); ?>
-				<li style="background:url('<?php echo $event_thumbnail[0]; ?>');" class="<?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image <?php endif; foreach ($post_categories as $category) : $category_name = $category->slug; echo $category_name . ' '; endforeach; ?>">
+				<li style="background-image:url('<?php echo $event_thumbnail[0]; ?>');" class="<?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image <?php endif; foreach ($post_categories as $category) : $category_name = $category->slug; echo $category_name . ' '; endforeach; ?>">
 					<a class="event-link" href="<?php the_permalink(); ?>">
 						<h1><?php the_title(); ?></h1>
 						<p class="thumb-date">
