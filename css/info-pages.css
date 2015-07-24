@@ -20,3 +20,52 @@
   font-weight: normal;
   font-style: normal;
 }
+.info {
+  margin: auto;
+  display: table !important;
+}
+.info .sub-header {
+  height: 60px;
+  display: inline-block;
+  float: right;
+  margin-top: 5em;
+  margin-right: -3em;
+}
+.info .sub-header nav {
+  float: right;
+  display: inline-block;
+}
+.info .sub-header nav li {
+  float: left;
+  display: inherit;
+/* Note on letter-spacing: Photoshop tracking is based on 1/1000em */
+  letter-spacing: -0.03em;
+  font-family: 'bold';
+  font-size: 1em;
+  line-height: 1.7em;
+}
+.info .sub-header nav li.current_page_item {
+  display: none;
+}
+.info .sub-header nav li a {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  display: inherit;
+  padding: 0.6em 0.3em;
+  margin: 0.6em 0.9em;
+  -webkit-box-shadow: inset 0 0 0 #fff, inset 0px 0 0px #000;
+  box-shadow: inset 0 0 0 #fff, inset 0px 0 0px #000;
+  -webkit-transition: box-shadow 0.1s ease-in-out;
+  -moz-transition: box-shadow 0.1s ease-in-out;
+  -o-transition: box-shadow 0.1s ease-in-out;
+  -ms-transition: box-shadow 0.1s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out;
+}
+.info .sub-header nav li a:hover {
+  -webkit-box-shadow: inset 0 -9px 0 #fff, inset 0px -11px 0px #000;
+  box-shadow: inset 0 -9px 0 #fff, inset 0px -11px 0px #000;
+}
+.info article {
+  max-width: 1024px;
+}
