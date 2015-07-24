@@ -74,11 +74,11 @@
 						<p class="thumb-date"><?php echo $feature_two_date->format('d F, Y'); ?><br>
 							<?php echo_time( $feature_two_id ); ?>
 						</p>
-						<li>
+						<ul>
 							<?php foreach ( $feature_two_categories as $category ) : ?>
 								<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
 							<?php endforeach; ?>
-						</li>
+						</ul>
 					</a>
 					<div class="buy-links">
 						<?php echo_purchase_link( $feature_two_id, 'buy-link' ); ?>
@@ -91,11 +91,11 @@
 						<p class="thumb-date"><?php echo $feature_three_date->format('d F, Y'); ?><br>
 							<?php echo_time( $feature_three_id ); ?>
 						</p>
-						<li>
+						<ul>
 							<?php foreach ( $feature_three_categories as $category ) : ?>
 								<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
 							<?php endforeach; ?>
-						</li>
+						</ul>
 					</a>
 					<div class="buy-links">
 						<?php echo_purchase_link( $feature_three_id, 'buy-link' ); ?>
