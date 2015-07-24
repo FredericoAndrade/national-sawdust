@@ -28,6 +28,12 @@
 		</ul>
 	</div>
 
+	<?php else : ?>
+
+		<div class="query page">
+			<h1 class="section-title">There are no events tagged '<?php the_search_query(); ?>'</h1>
+		</div>
+
 <?php endif; ?>
 
 <?php get_footer(); ?>
