@@ -30,6 +30,8 @@ html body {
   background: #fff;
 }
 html body .page {
+  position: relative;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -42,7 +44,6 @@ html body .page {
 }
 h1.section-title {
   display: inline-block;
-  width: 100%;
   text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -58,4 +59,28 @@ h1.section-title {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   filter: alpha(opacity=90);
   margin-bottom: 0.5em;
+}
+article {
+  display: block;
+  margin-bottom: 4em;
+}
+article p {
+  max-width: 1024px;
+/* Note on letter-spacing: Photoshop tracking is based on 1/1000em */
+  letter-spacing: -0.03em;
+  font-family: 'medium';
+  font-size: 1.5em;
+  line-height: 1.4;
+  clear: both;
+  display: block;
+}
+article p b {
+/* Note on letter-spacing: Photoshop tracking is based on 1/1000em */
+  letter-spacing: -0.03em;
+  font-family: 'bold';
+  font-size: 1.6em;
+  line-height: 1.4;
+}
+article p a {
+  color: #238df3;
 }

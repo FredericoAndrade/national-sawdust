@@ -1,0 +1,39 @@
+/*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
+@import 'variables'
+
+.info
+  margin auto
+  display table !important
+
+  .sub-header
+    height 60px
+    display inline-block
+    float right
+    margin-top 5em
+    margin-right -3em
+
+    nav
+      float right
+      display inline-block
+
+      li
+        float left
+        display inherit
+        font('bold', 1em, 1.7em)
+
+        &.current_page_item
+          display none
+
+        a
+          opacity .5
+          display inherit
+          padding .6em .3em
+          margin .6em .9em
+          box-shadow inset 0 0 0 #fff, inset 0px 0 0px #000
+          transition box-shadow $time
+
+          &:hover
+            box-shadow inset 0 -9px 0 #fff, inset 0px -11px 0px #000
+
+  article
+    max-width 1024px
