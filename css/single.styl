@@ -1,21 +1,21 @@
 /*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
 @import 'variables'
 
+.hero-img-wrap
+  display inline-block
+  height 60vw
+  max-height 900px
+  overflow hidden
+  width 100%
+  float left
+  background #BCB6DE
+
+  img
+    width 100%
+    height auto
+
 
 .single
-  .hero-img-wrap
-    display inline-block
-    height 60vw
-    max-height 900px
-    overflow hidden
-    width 100%
-    float left
-    background #BCB6DE
-
-    img
-      width 100%
-      height auto
-
   .content-wrap
     float left
     width 100%
@@ -69,6 +69,10 @@
                 opacity 1
 
         .buy-link
+          buy-link()
+          font("bold", 2vw,initial)
+
+        .members-link
           buy-link()
           font("bold", 2vw,initial)
 

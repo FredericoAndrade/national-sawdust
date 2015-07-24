@@ -20,7 +20,7 @@
   font-weight: normal;
   font-style: normal;
 }
-.single .hero-img-wrap {
+.hero-img-wrap {
   display: inline-block;
   height: 60vw;
   max-height: 900px;
@@ -29,7 +29,7 @@
   float: left;
   background: #bcb6de;
 }
-.single .hero-img-wrap img {
+.hero-img-wrap img {
   width: 100%;
   height: auto;
 }
@@ -129,6 +129,36 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 .single .content-wrap .main .event .buy-link:active {
+  border-bottom: 0;
+}
+.single .content-wrap .main .event .members-link {
+  float: right;
+  padding: 1.1em;
+  -webkit-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
+  -moz-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
+  -o-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
+  -ms-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
+  border: 1px solid rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  letter-spacing: -0.03em;
+  font-family: 'bold';
+  font-size: 1em;
+  line-height: initial;
+  letter-spacing: -0.03em;
+  font-family: "bold";
+  font-size: 2vw;
+  line-height: initial;
+}
+.single .content-wrap .main .event .members-link:hover {
+  color: #fff;
+  background: #2d98f6;
+  background: rgba(0,0,0,0.7);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.single .content-wrap .main .event .members-link:active {
   border-bottom: 0;
 }
 .single .content-wrap .archive {

@@ -21,23 +21,27 @@
   font-style: normal;
 }
 .related,
-.query-feed {
+.query-feed,
+.events-feed {
   display: inline-block;
   width: 100%;
 }
 .related .title,
-.query-feed .title {
+.query-feed .title,
+.events-feed .title {
   letter-spacing: -0.03em;
   font-family: "bold";
   font-size: 5vw;
   line-height: 1.1em;
 }
 .related .posts,
-.query-feed .posts {
+.query-feed .posts,
+.events-feed .posts {
   width: 100%;
 }
 .related .posts li,
-.query-feed .posts li {
+.query-feed .posts li,
+.events-feed .posts li {
   position: relative;
   background: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -48,13 +52,15 @@
   float: left;
 }
 .related .posts li a,
-.query-feed .posts li a {
+.query-feed .posts li a,
+.events-feed .posts li a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .related .posts li a.event-link,
-.query-feed .posts li a.event-link {
+.query-feed .posts li a.event-link,
+.events-feed .posts li a.event-link {
   height: 100%;
   width: 100%;
   padding: 1.3em;
@@ -69,13 +75,15 @@
   transition: opacity 0.1s ease-in-out;
 }
 .related .posts li a.event-link:hover,
-.query-feed .posts li a.event-link:hover {
+.query-feed .posts li a.event-link:hover,
+.events-feed .posts li a.event-link:hover {
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
 .related .posts li a.event-link h1,
-.query-feed .posts li a.event-link h1 {
+.query-feed .posts li a.event-link h1,
+.events-feed .posts li a.event-link h1 {
   margin: 0;
   text-transform: capitalize;
   letter-spacing: -0.03em;
@@ -88,7 +96,8 @@
   height: 100%;
 }
 .related .posts li a.event-link p,
-.query-feed .posts li a.event-link p {
+.query-feed .posts li a.event-link p,
+.events-feed .posts li a.event-link p {
   font-weight: bold;
   position: absolute;
   bottom: 1em;
@@ -96,10 +105,11 @@
   letter-spacing: -0.03em;
   font-family: 'bold';
   font-size: 1.8vw;
-  line-height: 1em;
+  line-height: 1.5em;
 }
 .related .posts li a.buy-link,
-.query-feed .posts li a.buy-link {
+.query-feed .posts li a.buy-link,
+.events-feed .posts li a.buy-link {
   float: right;
   padding: 1.1em;
   -webkit-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
@@ -120,7 +130,8 @@
   right: 1em;
 }
 .related .posts li a.buy-link:hover,
-.query-feed .posts li a.buy-link:hover {
+.query-feed .posts li a.buy-link:hover,
+.events-feed .posts li a.buy-link:hover {
   color: #fff;
   background: #2d98f6;
   background: rgba(0,0,0,0.7);
@@ -128,6 +139,48 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 .related .posts li a.buy-link:active,
-.query-feed .posts li a.buy-link:active {
+.query-feed .posts li a.buy-link:active,
+.events-feed .posts li a.buy-link:active {
+  border-bottom: 0;
+}
+.related .posts li a.buy-link,
+.query-feed .posts li a.buy-link,
+.events-feed .posts li a.buy-link,
+.related .posts li a.members-link,
+.query-feed .posts li a.members-link,
+.events-feed .posts li a.members-link {
+  float: right;
+  padding: 1.1em;
+  -webkit-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
+  -moz-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
+  -o-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
+  -ms-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
+  border: 1px solid rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  letter-spacing: -0.03em;
+  font-family: 'bold';
+  font-size: 1em;
+  line-height: initial;
+}
+.related .posts li a.buy-link:hover,
+.query-feed .posts li a.buy-link:hover,
+.events-feed .posts li a.buy-link:hover,
+.related .posts li a.members-link:hover,
+.query-feed .posts li a.members-link:hover,
+.events-feed .posts li a.members-link:hover {
+  color: #fff;
+  background: #2d98f6;
+  background: rgba(0,0,0,0.7);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.related .posts li a.buy-link:active,
+.query-feed .posts li a.buy-link:active,
+.events-feed .posts li a.buy-link:active,
+.related .posts li a.members-link:active,
+.query-feed .posts li a.members-link:active,
+.events-feed .posts li a.members-link:active {
   border-bottom: 0;
 }

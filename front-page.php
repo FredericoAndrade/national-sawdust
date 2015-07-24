@@ -67,16 +67,18 @@
 		</div>
 	</div>
     <div class="events-feed page">
-		<h1>Coming up</h1>
-		<ul>
+		<h1 class="section-title">Coming up</h1>
+		<ul class="posts">
 		    	<?php foreach( $events_feed_posts as $post ) : setup_postdata( $post );
 		    		$event_date = new DateTime( get_field( 'event_date', get_the_ID() ) );
 		    		$event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 				<li style="background:url('<?php echo $event_thumbnail[0]; ?>');" class="<?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image<?php endif; ?>">
 					<a class="event-link" href="<?php the_permalink(); ?>">
 						<h1><?php the_title(); ?></h1>
-						<p class="thumb-date"><?php echo $event_date->format('d F, Y') ?></p>
-						<p class="thumb-time"><?php echo_time( get_the_ID() ); ?></p>
+						<p class="thumb-date">
+							<?php echo $event_date->format('d F, Y') ?><br>
+							<?php echo_time( get_the_ID() ); ?>
+						</p>
 					</a>
 					<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
 					<?php echo_members_link( get_the_ID(), 'members-link' ); ?>

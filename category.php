@@ -9,8 +9,9 @@
 
 	<div class="hero-img-wrap">
 		<img src="<?php echo $cat_thumbnail; ?>" class="hero-img" />
-		<h1><?php single_cat_title(); ?></h1>
 	</div>
+
+	<h1 class="section-title"><?php single_cat_title(); ?></h1>
 
 	<?php if ( have_posts() ) : ?>
 		<!-- need to consider parameters for this to be a grid or stream -->
@@ -23,7 +24,7 @@
 					<a class="event-link" href="<?php the_permalink(); ?>">
 						<h1><?php the_title(); ?></h1>
 						<p class="thumb-date">
-							<?php $date = new DateTime( get_field('event_date') ); echo $date->format('d F, Y'); ?>
+							<?php $date = new DateTime( get_field('event_date') ); echo $date->format('d F, Y'); ?><br>
 							<?php echo_time( get_the_ID() ); ?>
 						</p>
 					</a>

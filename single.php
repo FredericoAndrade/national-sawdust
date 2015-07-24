@@ -14,14 +14,15 @@
 				<div class="event">
 					<h1 class="title">
 						<?php the_title(); ?>
-						<span class="date"><?php the_date('d F, Y'); ?></span>
+						<span class="date"><?php the_date('d F, Y'); ?></span> <br>
+						<span><?php echo_time( get_the_ID() ); ?></span>
 					</h1>
 					<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
 					<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
 					<article>
 						<?php the_content(); ?>
 					</article>
-					<h1 class="title">Tags</h1>
+					<h1 class="section-title">Tags</h1>
 					<ul class="categories">
 						<?php wp_list_categories( 'exclude=2&title_li=' ); ?>
 					</ul>
@@ -37,7 +38,7 @@
 			    ?>
 		    </div>
 		    <div class="related page">
-		    	<h1 class="title">Similar Events</h1>
+		    	<h1 class="section-title">Similar Events</h1>
 		    	<ul class="posts">
 
 		    	<?php foreach( $categories as $category ) :
@@ -52,7 +53,7 @@
 							<!-- <?php the_post_thumbnail( 'medium', array( 'class' => 'event-thumb' ) ); ?> -->
 							<h1><?php the_title(); ?></h1>
 							<p class="thumb-date">
-								<?php $date = new DateTime( get_field('event_date') ); echo $date->format('d F, Y'); ?>
+								<?php $date = new DateTime( get_field('event_date') ); echo $date->format('d F, Y'); ?><br>
 								<?php echo_time( get_the_ID() ); ?>
 							</p>
 						</a>

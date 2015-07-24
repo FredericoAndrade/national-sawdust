@@ -1,7 +1,7 @@
 /*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
 @import 'variables'
 
-.related, .query-feed
+.related, .query-feed, .events-feed
   display inline-block
   width 100%
 
@@ -22,3 +22,6 @@
 
       a
         event-link()
+
+        &.buy-link, &.members-link
+          buy-link()
