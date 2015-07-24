@@ -26,15 +26,15 @@
 					</article>
 					<h1 class="section-title">Tags</h1>
 					<ul class="categories">
-						<?php //echo get_the_category_list(); 
+						<?php //echo get_the_category_list();
 							$taxonomy = 'category';
 							$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
 							$find = '3';
-							$key = array_search( $find, $post_terms ); 
+							$key = array_search( $find, $post_terms );
 							if ($key != NULL || $key !== FALSE) : unset($post_terms[$key]); endif;
 							$term_ids = implode( ',' , $post_terms );
 							$terms = wp_list_categories( 'title_li=&include=' . $term_ids );
-							
+
 
 							echo $terms; ?>
 					</ul>
@@ -58,7 +58,7 @@
 		    			$related_args = array( 'category' => $cat_id, 'posts_per_page' =>  -1);
 		    			$related_posts = get_posts( $related_args );
 		    			foreach( $related_posts as $post ) :
-							$event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); 
+							$event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
 							$post_categories = get_the_category( get_the_ID() ); ?>
 
 					<li style="background:url('<?php echo $event_thumbnail[0]; ?>');" class="related-post <?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image <?php endif; $post_categories = get_the_category( get_the_ID() ); ?>">
@@ -70,7 +70,7 @@
 								<?php echo_time( get_the_ID() ); ?>
 							</p>
 						</a>
-						<ul>
+						<ul class="thumbnail-categories">
 							<?php foreach ( $post_categories as $category ) : ?>
 								<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
 							<?php endforeach; ?>

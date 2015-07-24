@@ -49,7 +49,7 @@
 .events-feed .posts li,
 .calendar .posts li {
   position: relative;
-  background: #fff;
+  background-color: #f9f9f9;
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   margin: 1%;
@@ -119,6 +119,12 @@
   font-family: 'bold';
   font-size: 1.8vw;
   line-height: 1.5em;
+}
+.related .posts li ul.thumbnail-categories,
+.query-feed .posts li ul.thumbnail-categories,
+.events-feed .posts li ul.thumbnail-categories,
+.calendar .posts li ul.thumbnail-categories {
+  display: none;
 }
 .related .posts li .buy-links,
 .query-feed .posts li .buy-links,
