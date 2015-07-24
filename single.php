@@ -23,7 +23,17 @@
 					</article>
 					<h1 class="title">Tags</h1>
 					<ul class="categories">
-						<?php wp_list_categories( 'exclude=2&title_li=' ); ?>
+						<?php //echo get_the_category_list(); 
+							$taxonomy = 'category';
+							$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
+							$find = '3';
+							$key = array_search( $find, $post_terms ); 
+							if ($key != NULL || $key !== FALSE) : unset($post_terms[$key]); endif;
+							$term_ids = implode( ',' , $post_terms );
+							$terms = wp_list_categories( 'title_li=&include=' . $term_ids );
+							
+
+							echo $terms; ?>
 					</ul>
 					<p class="date"><?php the_date('m/d/Y'); ?></p>
 				</div>
