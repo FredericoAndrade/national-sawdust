@@ -32,7 +32,7 @@
 	$events_args = array( 'category' => $events_feed, 'posts_per_page' => '-1' );
 	$events_feed_posts = get_posts( $events_args );
 	?>
-	<div class="featured-posts page">
+	<div class="featured-posts">
 		<div <?php if(has_post_thumbnail( $feature_one_id )) : ?> class="primary feature has-image"<?php else : ?> class="primary feature no-image"  <?php endif; ?> >
 			<a class="event-link" <?php if(has_post_thumbnail( $feature_one_id )) : ?>  style="background-image: url('<?php echo $feature_one_img_url[0]; ?>')" <?php endif; ?> href="<?php echo $feature_one_permalink;?>">
 				<h1 class="thumb-title"><?php echo $feature_one_name; ?></h1>

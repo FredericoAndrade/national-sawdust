@@ -4,10 +4,12 @@
 .single
   .hero-img-wrap
     display inline-block
+    height 60vw
     max-height 900px
     overflow hidden
     width 100%
     float left
+    background #BCB6DE
 
     img
       width 100%
@@ -15,6 +17,104 @@
 
   .content-wrap
     float left
+    width 100%
 
-    .main, .related-content
+    .main
+      margin auto
+      display table
+      margin-top 4em
+
+      .event
+        .title
+          float left
+          width 66.66%
+          margin 0
+          font("bold", 5vw, 1.1em)
+
+          span
+            clear both
+            display block
+
+        article
+          display inline-block
+          margin-bottom 4em
+
+          p
+            max-width 1024px
+            font('medium', 1.5em, 1.4)
+            clear both
+            display block
+
+            a
+              color #238DF5
+
+        ul.categories
+          width 100%
+          margin-top 1em
+          display inline-block
+
+          li
+            float left
+            display inline-block
+
+            a
+              display block
+              padding 1em
+              opacity .8
+              font('medium', 1.4em, 1em)
+              transition opacity $time
+
+              &:hover
+                opacity 1
+
+        .buy-link
+          buy-link()
+          font("bold", 2vw,initial)
+
+    .archive
+      height 200px
+      width 100%
+      display none
       float left
+      background #BCB6DE
+      margin 3em -3em
+      padding 0 3em
+
+      h2
+        margin 0
+        text-align center
+        font('bold', 2em, 200px)
+
+    .related
+      display inline-block
+      width 100%
+
+      .title
+        font("bold", 5vw, 1.1em)
+
+      .posts
+        width 100%
+
+        li
+          position relative
+          background #fff
+          box-shadow $shadow-2
+          margin 1%
+          height 43vw
+          width 31.33%
+          float left
+
+          a
+            event-link()
+
+          &:nth-of-type(4n-1)
+            background #C8E7F0
+          &:nth-of-type(7n-1)
+            background #FFF7D5
+          &:nth-of-type(5n-1)
+            background #000
+
+            *
+              color white
+          &:nth-of-type(10n-8)
+            background #E06334

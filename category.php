@@ -1,6 +1,6 @@
-<?php 
+<?php
 	get_header();
-		
+
 	$queried_object = get_queried_object();
 	$taxonomy = $queried_object->taxonomy;
 	$term_id = $queried_object->term_id;
@@ -24,10 +24,15 @@
 					<!-- thumbnail elements -->
 					<?php the_title(); ?>
 					<?php the_post_thumbnail( 'large', array( 'class' => 'event-thumb' ) ); ?>
+<<<<<<< HEAD
 					<?php echo get_field( 'event_date' ); ?>
 					<?php echo_time( get_the_ID() ); ?>
 					<?php echo_purchase_link( get_the_ID(), 'purchase-link' ); ?>
 					<?php echo_members_link( get_the_ID(), 'members-link' ); ?>			
+=======
+					<?php the_date('m/d/Y'); ?>
+					<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
+>>>>>>> master
 				</li>
 			<?php endwhile; ?>
 			</ul>
