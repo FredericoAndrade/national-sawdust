@@ -54,7 +54,7 @@
 					<?php echo_time( $feature_one_id ); ?>
 				</p>
 				<p class="thumb-preview"><?php echo $feature_one_preview; ?></p>
-				
+
 			</a>
 			<ul>
 				<?php foreach ( $feature_one_categories as $category ) : ?>
@@ -91,7 +91,7 @@
 						<p class="thumb-date"><?php echo $feature_three_date->format('d F, Y'); ?><br>
 							<?php echo_time( $feature_three_id ); ?>
 						</p>
-						<ul>
+						<ul class="thumbnail-categories">
 							<?php foreach ( $feature_three_categories as $category ) : ?>
 								<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
 							<?php endforeach; ?>
@@ -120,7 +120,7 @@
 							<?php echo_time( get_the_ID() ); ?>
 						</p>
 					</a>
-					<ul>
+					<ul class="thumbnail-categories">
 						<?php foreach ( $post_categories as $category ) : ?>
 							<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
 						<?php endforeach; ?>

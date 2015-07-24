@@ -70,7 +70,7 @@
 								<?php echo_time( get_the_ID() ); ?>
 							</p>
 						</a>
-						<ul>
+						<ul class="thumbnail-categories">
 							<?php foreach ( $post_categories as $category ) : ?>
 								<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
 							<?php endforeach; ?>
