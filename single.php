@@ -25,7 +25,6 @@
 					<ul class="categories">
 						<?php wp_list_categories( 'exclude=2&title_li=' ); ?>
 					</ul>
-					<p class="date"><?php the_date('m/d/Y'); ?></p>
 				</div>
 			</div>
 			<div class="archive">
