@@ -61,7 +61,7 @@
 							$event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
 							$post_categories = get_the_category( get_the_ID() ); ?>
 
-					<li style="background:url('<?php echo $event_thumbnail[0]; ?>');" class="related-post <?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image <?php endif; $post_categories = get_the_category( get_the_ID() ); ?>">
+					<li style="background-image:url('<?php echo $event_thumbnail[0]; ?>');" class="related-post <?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image <?php endif; $post_categories = get_the_category( get_the_ID() ); ?>">
 						<a class="event-link" href="<?php the_permalink(); ?>">
 							<!-- <?php the_post_thumbnail( 'medium', array( 'class' => 'event-thumb' ) ); ?> -->
 							<h1><?php the_title(); ?></h1>
