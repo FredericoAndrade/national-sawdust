@@ -67,7 +67,6 @@
 		if ( $past_calendar_posts->have_posts() ) : ?>
 
 		<h3 class="title">Past Events</h3>
-
 		<ul class="posts">
 			<?php while ( $past_calendar_posts->have_posts() ) : $past_calendar_posts->the_post(); ?>
 			<?php $event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
