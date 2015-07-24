@@ -11,6 +11,8 @@ html
     background #fff
 
     .page
+      position relative
+      display inline-block
       box-sizing border-box
       padding 0 3em
 
@@ -22,10 +24,25 @@ html
 
 h1.section-title
   display inline-block
-  width 100%
   text-align left
   box-sizing border-box
   border-radius 5px
   font('black', 4.8em, initial)
   opacity .9
   margin-bottom .5em
+
+article
+  display inline-block
+  margin-bottom 4em
+
+  p
+    max-width 1024px
+    font('medium', 1.5em, 1.4)
+    clear both
+    display block
+
+    b
+      font('bold', 1.6em, 1.4)
+
+    a
+      color $link-color
