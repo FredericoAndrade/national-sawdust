@@ -56,3 +56,23 @@
         bottom $padding
         a
           buy-link()
+
+      &.has-image
+        .event-link
+          background-position right
+          background-size cover
+
+          h1, p
+            color white
+            text-shadow $shadow-2
+
+        .buy-links
+          a
+            background #fff
+            opacity .8
+            color #000
+            text-shadow $shadow-1
+
+            &:hover
+              background #000
+              color #fff

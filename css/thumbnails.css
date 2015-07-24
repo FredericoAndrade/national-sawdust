@@ -156,3 +156,36 @@
 .events-feed .posts li .buy-links a:active {
   border-bottom: 0;
 }
+.related .posts li.has-image .event-link,
+.query-feed .posts li.has-image .event-link,
+.events-feed .posts li.has-image .event-link {
+  background-position: right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.related .posts li.has-image .event-link h1,
+.query-feed .posts li.has-image .event-link h1,
+.events-feed .posts li.has-image .event-link h1,
+.related .posts li.has-image .event-link p,
+.query-feed .posts li.has-image .event-link p,
+.events-feed .posts li.has-image .event-link p {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.related .posts li.has-image .buy-links a,
+.query-feed .posts li.has-image .buy-links a,
+.events-feed .posts li.has-image .buy-links a {
+  background: #fff;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  color: #000;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.related .posts li.has-image .buy-links a:hover,
+.query-feed .posts li.has-image .buy-links a:hover,
+.events-feed .posts li.has-image .buy-links a:hover {
+  background: #000;
+  color: #fff;
+}
