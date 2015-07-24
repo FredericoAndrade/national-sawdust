@@ -26,8 +26,8 @@
                 <?php get_search_form(); ?>
             </div>
             <ul id="nav">
-                <li><a href="<?php bloginfo( 'url' ); ?>/mission">about</a></li>
-                <?php wp_list_pages('exclude=2,68,70,72,74&title_li='); ?>
+                <li><a href="<?php bloginfo( 'url' ); ?>/mission">About</a></li>
+                <?php wp_list_pages('include=47,49&title_li='); ?>
             </ul>
         </header>
 

@@ -20,88 +20,86 @@
   font-weight: normal;
   font-style: normal;
 }
-.single .hero-img-wrap {
+.related,
+.query-feed {
   display: inline-block;
-  height: 60vw;
-  max-height: 900px;
-  overflow: hidden;
-  width: 100%;
-  float: left;
-  background: #bcb6de;
-}
-.single .hero-img-wrap img {
-  width: 100%;
-  height: auto;
-}
-.single .content-wrap {
-  float: left;
   width: 100%;
 }
-.single .content-wrap .main {
-  margin: auto;
-  display: table;
-  margin-top: 4em;
-}
-.single .content-wrap .main .event .title {
-  float: left;
-  width: 66.66%;
-  margin: 0;
+.related .title,
+.query-feed .title {
   letter-spacing: -0.03em;
   font-family: "bold";
   font-size: 5vw;
   line-height: 1.1em;
 }
-.single .content-wrap .main .event .title span {
-  clear: both;
-  display: block;
-}
-.single .content-wrap .main .event article {
-  display: inline-block;
-  margin-bottom: 4em;
-}
-.single .content-wrap .main .event article p {
-  max-width: 1024px;
-  letter-spacing: -0.03em;
-  font-family: 'medium';
-  font-size: 1.5em;
-  line-height: 1.4;
-  clear: both;
-  display: block;
-}
-.single .content-wrap .main .event article p a {
-  color: #238df5;
-}
-.single .content-wrap .main .event ul.categories {
+.related .posts,
+.query-feed .posts {
   width: 100%;
-  margin-top: 1em;
-  display: inline-block;
 }
-.single .content-wrap .main .event ul.categories li {
+.related .posts li,
+.query-feed .posts li {
+  position: relative;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin: 1%;
+  height: 43vw;
+  width: 31.33%;
   float: left;
-  display: inline-block;
 }
-.single .content-wrap .main .event ul.categories li a {
-  display: block;
-  padding: 1em;
+.related .posts li a,
+.query-feed .posts li a {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.related .posts li a.event-link,
+.query-feed .posts li a.event-link {
+  height: 100%;
+  width: 100%;
+  padding: 1.3em;
   opacity: 0.8;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: alpha(opacity=80);
-  letter-spacing: -0.03em;
-  font-family: 'medium';
-  font-size: 1.4em;
-  line-height: 1em;
+  display: inline-block;
   -webkit-transition: opacity 0.1s ease-in-out;
   -moz-transition: opacity 0.1s ease-in-out;
   -o-transition: opacity 0.1s ease-in-out;
   -ms-transition: opacity 0.1s ease-in-out;
   transition: opacity 0.1s ease-in-out;
 }
-.single .content-wrap .main .event ul.categories li a:hover {
+.related .posts li a.event-link:hover,
+.query-feed .posts li a.event-link:hover {
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-.single .content-wrap .main .event .buy-link {
+.related .posts li a.event-link h1,
+.query-feed .posts li a.event-link h1 {
+  margin: 0;
+  text-transform: capitalize;
+  letter-spacing: -0.03em;
+  font-family: 'black';
+  font-size: 6vw;
+  line-height: 1em;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 100%;
+}
+.related .posts li a.event-link p,
+.query-feed .posts li a.event-link p {
+  font-weight: bold;
+  position: absolute;
+  bottom: 1em;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.03em;
+  font-family: 'bold';
+  font-size: 1.8vw;
+  line-height: 1em;
+}
+.related .posts li a.buy-link,
+.query-feed .posts li a.buy-link {
   float: right;
   padding: 1.1em;
   -webkit-transition: background 0.1s ease-in-out, color 0.1s ease-in-out, border-bottom-color 0.1s ease-in-out;
@@ -116,35 +114,20 @@
   font-family: 'bold';
   font-size: 1em;
   line-height: initial;
-  letter-spacing: -0.03em;
-  font-family: "bold";
-  font-size: 2vw;
-  line-height: initial;
+  display: block;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
 }
-.single .content-wrap .main .event .buy-link:hover {
+.related .posts li a.buy-link:hover,
+.query-feed .posts li a.buy-link:hover {
   color: #fff;
   background: #2d98f6;
   background: rgba(0,0,0,0.7);
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
-.single .content-wrap .main .event .buy-link:active {
+.related .posts li a.buy-link:active,
+.query-feed .posts li a.buy-link:active {
   border-bottom: 0;
-}
-.single .content-wrap .archive {
-  height: 200px;
-  width: 100%;
-  display: none;
-  float: left;
-  background: #bcb6de;
-  margin: 3em -3em;
-  padding: 0 3em;
-}
-.single .content-wrap .archive h2 {
-  margin: 0;
-  text-align: center;
-  letter-spacing: -0.03em;
-  font-family: 'bold';
-  font-size: 2em;
-  line-height: 200px;
 }

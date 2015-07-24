@@ -1,6 +1,7 @@
 /*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
 @import 'variables'
 
+
 .single
   .hero-img-wrap
     display inline-block
@@ -84,37 +85,3 @@
         margin 0
         text-align center
         font('bold', 2em, 200px)
-
-    .related
-      display inline-block
-      width 100%
-
-      .title
-        font("bold", 5vw, 1.1em)
-
-      .posts
-        width 100%
-
-        li
-          position relative
-          background #fff
-          box-shadow $shadow-2
-          margin 1%
-          height 43vw
-          width 31.33%
-          float left
-
-          a
-            event-link()
-
-          &:nth-of-type(4n-1)
-            background #C8E7F0
-          &:nth-of-type(7n-1)
-            background #FFF7D5
-          &:nth-of-type(5n-1)
-            background #000
-
-            *
-              color white
-          &:nth-of-type(10n-8)
-            background #E06334

@@ -45,10 +45,12 @@
 		    			$cat_id = $category->term_id;
 		    			$related_args = array( 'category' => $cat_id, 'posts_per_page' =>  -1);
 		    			$related_posts = get_posts( $related_args );
-		    			foreach( $related_posts as $post ) : ?>
-					<li class="<?php echo $post->post_name; ?> related-post">
+		    			foreach( $related_posts as $post ) :
+					$event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
+
+					<li style="background:url('<?php echo $event_thumbnail[0]; ?>');" class="related-post <?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image<?php endif; ?>">
 						<a class="event-link" href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail( 'medium', array( 'class' => 'event-thumb' ) ); ?>
+							<!-- <?php the_post_thumbnail( 'medium', array( 'class' => 'event-thumb' ) ); ?> -->
 							<h1><?php the_title(); ?></h1>
 							<p class="thumb-date">
 								<?php $date = new DateTime( get_field('event_date') ); echo $date->format('d F, Y'); ?>
@@ -60,6 +62,7 @@
 					</li>
 
 		    	<?php endforeach; endforeach; ?>
+
 		    	</ul>
 		    </div>
 		</div>

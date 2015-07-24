@@ -1,0 +1,24 @@
+/*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
+@import 'variables'
+
+.related, .query-feed
+  display inline-block
+  width 100%
+
+  .title
+    font("bold", 5vw, 1.1em)
+
+  .posts
+    width 100%
+
+    li
+      position relative
+      background #fff
+      box-shadow $shadow-2
+      margin 1%
+      height 43vw
+      width 31.33%
+      float left
+
+      a
+        event-link()
