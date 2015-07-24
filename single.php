@@ -21,6 +21,7 @@
 					</ul>
 					<p class="date"><?php the_date('m/d/Y'); ?></p>
 					<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
+					<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
 				</div>
 			</div>
 			<?php /*
@@ -50,9 +51,11 @@
 										$date = new DateTime( get_field('event_date') );
 										echo $date->format('d/m/Y');
 										?>
+									<?php echo_time( get_the_ID() ); ?>
 								</div>
 								<div class="thumb-purchase left">
-									<?php echo_purchase_link( get_the_ID() ); ?>
+									<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
+									<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
 								</div>
 								<div class="clear"></div>
 							</p>

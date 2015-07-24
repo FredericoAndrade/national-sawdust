@@ -30,4 +30,33 @@ function echo_purchase_link( $post_id, $class) {
 	endif;
 }
 
+function echo_members_link( $post_id, $class) {
+	$member_link = get_field('member_purchase_link', $post_id );
+
+	if ( $member_link ) :
+		echo '<a href="';
+		if ( strpos( $member_link, 'http' ) !== false ) :
+			echo $member_link;
+		else :
+			echo 'http://' . $member_link;
+		endif;
+		echo '" class="' . $class . '" target="_blank">Buy</a>';
+	endif;
+}
+
+/*
+ * Parse purchase_link variable to make sure it has 'http' prefix.
+ */
+
+function echo_time( $post_id ) {
+	$event_time = get_field( 'event_time', $post_id );
+
+	if ( $event_time ) :
+
+		echo $event_time;
+
+	endif;
+
+}
+
 ?>
