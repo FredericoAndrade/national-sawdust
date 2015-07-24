@@ -9,25 +9,28 @@
 
 	<div class="hero-img-wrap">
 		<img src="<?php echo $cat_thumbnail; ?>" class="hero-img" />
-		<h1><?php single_cat_title(); ?></h1>
 	</div>
 
 	<?php if ( have_posts() ) : ?>
 		<!-- need to consider parameters for this to be a grid or stream -->
-		<div class="query-feed">
-			<ul>
+		<div class="query-feed page">
+			<h1 class="section-title">Events tagged '<?php single_cat_title(); ?>'</h1>
+			<ul class="posts">
 			<?php while ( have_posts() ) : the_post(); ?>
+				<?php $event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
 				<!-- markup to be considered here-->
-				<li>
-					<!-- link to post -->
-					<a href="<?php the_permalink(); ?>"></a>
-					<!-- thumbnail elements -->
-					<?php the_title(); ?>
-					<?php the_post_thumbnail( 'large', array( 'class' => 'event-thumb' ) ); ?>
-					<?php echo get_field( 'event_date' ); ?>
-					<?php echo_time( get_the_ID() ); ?>
-					<?php echo_purchase_link( get_the_ID(), 'purchase-link' ); ?>
-					<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
+				<li style="background:url('<?php echo $event_thumbnail[0]; ?>');" class="related-post <?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image<?php endif; ?>">
+					<a class="event-link" href="<?php the_permalink(); ?>">
+						<h1><?php the_title(); ?></h1>
+						<p class="thumb-date">
+							<?php $date = new DateTime( get_field('event_date') ); echo $date->format('d F, Y'); ?><br>
+							<?php echo_time( get_the_ID() ); ?>
+						</p>
+					</a>
+					<section class="buy-links">
+						<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
+						<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
+					</section>
 				</li>
 			<?php endwhile; ?>
 			</ul>

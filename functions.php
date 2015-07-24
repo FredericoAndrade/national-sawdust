@@ -40,7 +40,7 @@ function echo_members_link( $post_id, $class) {
 		else :
 			echo 'http://' . $member_link;
 		endif;
-		echo '" class="' . $class . '" target="_blank">Buy</a>';
+		echo '" class="' . $class . '" target="_blank">Members</a>';
 	endif;
 }
 

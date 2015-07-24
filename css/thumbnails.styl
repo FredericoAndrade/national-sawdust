@@ -1,0 +1,58 @@
+/*To auto-compile Stylus and auto-prefixer Nib, run stylus -u nib -w from parent folder*/
+@import 'variables'
+
+.related, .query-feed, .events-feed
+  display inline-block
+  width 100%
+
+  .title
+    font("bold", 5vw, 1.1em)
+
+  .posts
+    width 100%
+
+    li
+      position relative
+      background #fff
+      box-shadow $shadow-2
+      margin 1%
+      height 43vw
+      width 31.33%
+      float left
+
+      a
+        box-sizing border-box
+
+        &.event-link
+          height 100%
+          width 100%
+          padding 1.3em
+          opacity .8
+          display inline-block
+          transition opacity $time
+
+          &:hover
+            opacity 1
+
+          h1
+            margin 0
+            text-transform capitalize
+            font('black', 6vw, 1em)
+            text-overflow ellipsis
+            overflow hidden
+            height 100%
+
+          p
+            font-weight bold
+            position absolute
+            bottom 1em
+            margin 0 0 12px 0
+            font('bold', 1.8vw, 1.5em)
+
+      .buy-links
+        display inline-block
+        position absolute
+        right $padding
+        bottom $padding
+        a
+          buy-link()
