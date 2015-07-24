@@ -9,7 +9,7 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php $event_thumbnail = wp_get_attachment_image_src(  get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); ?>
 			<!-- markup to be considered here-->
-			<li style="background:url('<?php echo $event_thumbnail[0]; ?>');" class="related-post <?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image<?php endif; ?>">
+			<li style="background-image:url('<?php echo $event_thumbnail[0]; ?>');" class="related-post <?php if( has_post_thumbnail() ) : ?>has-image <?php else : ?> no-image<?php endif; ?>">
 				<a class="event-link" href="<?php the_permalink(); ?>">
 					<h1><?php the_title(); ?></h1>
 					<p class="thumb-date">
