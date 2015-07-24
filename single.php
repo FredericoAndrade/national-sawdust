@@ -17,8 +17,10 @@
 						<span class="date"><?php the_date('d F, Y'); ?></span> <br>
 						<span><?php echo_time( get_the_ID() ); ?></span>
 					</h1>
-					<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
-					<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
+					<section class="buy-links">
+						<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
+						<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
+					</section>
 					<article>
 						<?php the_content(); ?>
 					</article>
@@ -57,8 +59,10 @@
 								<?php echo_time( get_the_ID() ); ?>
 							</p>
 						</a>
-						<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
-						<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
+						<section class="buy-links">
+							<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
+							<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
+						</section>
 					</li>
 
 		    	<?php endforeach; endforeach; ?>

@@ -21,7 +21,38 @@
       float left
 
       a
-        event-link()
+        box-sizing border-box
 
-        &.buy-link, &.members-link
+        &.event-link
+          height 100%
+          width 100%
+          padding 1.3em
+          opacity .8
+          display inline-block
+          transition opacity $time
+
+          &:hover
+            opacity 1
+
+          h1
+            margin 0
+            text-transform capitalize
+            font('black', 6vw, 1em)
+            text-overflow ellipsis
+            overflow hidden
+            height 100%
+
+          p
+            font-weight bold
+            position absolute
+            bottom 1em
+            margin 0 0 12px 0
+            font('bold', 1.8vw, 1.5em)
+
+      .buy-links
+        display inline-block
+        position absolute
+        right $padding
+        bottom $padding
+        a
           buy-link()

@@ -47,7 +47,7 @@
             display block
 
             a
-              color #238DF5
+              color $link-color
 
         ul.categories
           width 100%
@@ -68,13 +68,16 @@
               &:hover
                 opacity 1
 
-        .buy-link
-          buy-link()
-          font("bold", 2vw,initial)
+        .buy-links
+          display inline-block
+          float right
+          .buy-link
+            buy-link()
+            font("bold", 2vw,initial)
 
-        .members-link
-          buy-link()
-          font("bold", 2vw,initial)
+          .members-link
+            buy-link()
+            font("bold", 2vw,initial)
 
     .archive
       height 200px

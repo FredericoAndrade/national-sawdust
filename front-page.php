@@ -80,8 +80,10 @@
 							<?php echo_time( get_the_ID() ); ?>
 						</p>
 					</a>
-					<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
-					<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
+					<section class="buy-links">
+						<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
+						<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
+					</section>
 				</li>
 		    	<?php endforeach; wp_reset_postdata(); ?>
 	    </ul>

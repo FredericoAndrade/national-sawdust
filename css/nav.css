@@ -43,7 +43,7 @@ header #logo a img {
 }
 header #search-bar {
   display: inline-block;
-  width: 60%;
+  width: 50%;
 }
 header #search-bar form input {
   -webkit-box-sizing: border-box;
@@ -53,6 +53,7 @@ header #search-bar form input {
   height: 50px;
   margin: 5px;
   padding: 1em;
+/* Note on letter-spacing: Photoshop tracking is based on 1/1000em */
   letter-spacing: -0.03em;
   font-family: "medium";
   font-size: 1em;
@@ -70,6 +71,7 @@ header #nav {
 header #nav li {
   display: inherit;
   float: left;
+/* Note on letter-spacing: Photoshop tracking is based on 1/1000em */
   letter-spacing: -0.03em;
   font-family: 'bold';
   font-size: 0.9em;
