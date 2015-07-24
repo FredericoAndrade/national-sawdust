@@ -67,7 +67,7 @@
 		<!-- markup to be considered here-->
 		<li>
 			<!-- link to post -->
-			<a href="<?php the_permalink(); ?>"></a>
+			<a  href="<?php the_permalink(); ?>"></a>
 			<!-- thumbnail elements -->
 			<?php the_title(); ?>
 			<?php the_post_thumbnail( 'large', array( 'class' => 'event-thumb' ) ); ?>
