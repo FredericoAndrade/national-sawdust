@@ -54,7 +54,13 @@
 					<?php echo_time( $feature_one_id ); ?>
 				</p>
 				<p class="thumb-preview"><?php echo $feature_one_preview; ?></p>
+				
 			</a>
+			<ul>
+				<?php foreach ( $feature_one_categories as $category ) : ?>
+					<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
+				<?php endforeach; ?>
+			</ul>
 			<div class="buy-links">
 				<?php echo_purchase_link( $feature_one_id, 'buy-link' ); ?>
 				<?php echo_members_link( $feature_one_id, 'members-link' ); ?>
@@ -68,6 +74,11 @@
 						<p class="thumb-date"><?php echo $feature_two_date->format('d F, Y'); ?><br>
 							<?php echo_time( $feature_two_id ); ?>
 						</p>
+						<ul>
+							<?php foreach ( $feature_two_categories as $category ) : ?>
+								<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
+							<?php endforeach; ?>
+						</ul>
 					</a>
 					<div class="buy-links">
 						<?php echo_purchase_link( $feature_two_id, 'buy-link' ); ?>
@@ -80,6 +91,11 @@
 						<p class="thumb-date"><?php echo $feature_three_date->format('d F, Y'); ?><br>
 							<?php echo_time( $feature_three_id ); ?>
 						</p>
+						<ul>
+							<?php foreach ( $feature_three_categories as $category ) : ?>
+								<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
+							<?php endforeach; ?>
+						</ul>
 					</a>
 					<div class="buy-links">
 						<?php echo_purchase_link( $feature_three_id, 'buy-link' ); ?>
@@ -104,6 +120,11 @@
 							<?php echo_time( get_the_ID() ); ?>
 						</p>
 					</a>
+					<ul>
+						<?php foreach ( $post_categories as $category ) : ?>
+							<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
+						<?php endforeach; ?>
+					</ul>
 					<section class="buy-links">
 						<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
 						<?php echo_members_link( get_the_ID(), 'members-link' ); ?>

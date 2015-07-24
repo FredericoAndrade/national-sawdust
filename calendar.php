@@ -55,6 +55,11 @@
 						<?php echo_time( get_the_ID() ); ?>
 					</p>
 				</a>
+				<ul>
+				<?php foreach ( $post_categories as $category ) : ?>
+		 			<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
+				<?php endforeach; ?>
+				</ul>	
 				<section class="buy-links">
 					<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
 					<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
@@ -82,6 +87,11 @@
 						<?php echo_time( get_the_ID() ); ?>
 					</p>
 				</a>
+				<ul>
+				<?php foreach ( $post_categories as $category ) : ?>
+		 			<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
+				<?php endforeach; ?>
+				</ul>	
 				<section class="buy-links">
 					<?php echo_purchase_link( get_the_ID(), 'buy-link' ); ?>
 					<?php echo_members_link( get_the_ID(), 'members-link' ); ?>
