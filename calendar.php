@@ -57,7 +57,7 @@
 				</a>
 				<ul>
 				<?php foreach ( $post_categories as $category ) : ?>
-					<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
+		 			<li> <a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
 				<?php endforeach; ?>
 				</ul>	
 				<section class="buy-links">
@@ -89,7 +89,7 @@
 				</a>
 				<ul>
 				<?php foreach ( $post_categories as $category ) : ?>
-					<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
+		 			<li><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->slug; ?></a></li>
 				<?php endforeach; ?>
 				</ul>	
 				<section class="buy-links">
